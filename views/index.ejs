@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAYUSH-ADITI</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+     <div class="main-page">
+        <div class="left">
+            Unlock to see the love.
+        </div>
+        <div class="right">
+            <% if(locals.name){ %>
+
+                <h3 style="color: lightgreen">successfully logged in</h3>
+                <a href="/quiz">Love quiz</a>
+                
+            <% } else{ %>
+                
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+                
+            <% } %>
+        </div>
+     </div>
+</body>
+</html>
