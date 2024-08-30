@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love quiz</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="main-page">
+        <div class="quiz-box">
+            <div class="ques">
+                <%= questions[count].q  %>
+            </div>
+            <div class="options">
+                <form action="/check" method="POST">
+                    <% for (let i = 1; i <= 4; i++) { %>
+                        <div>
+                            <input type="radio" id="option<%= i %>" name="selectedo" value="<%= questions[count]['o' + i] %>">
+                            <label for="option<%= i %>"><%= questions[count]['o' + i] %></label>
+                        </div>
+                    <% } %>
+                    <!-- Hidden input to store the selected option -->
+                    <input type="hidden" name="selectedOption" id="hiddenSelectedOption">
+                    <button type="submit" onclick="submitForm()">Check</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function submitForm() {
+            const selectedOption = document.querySelector('input[name="selectedOption"]:checked');
+            if (selectedOption) {
+                document.getElementById('hiddenSelectedOption').value = selectedOption.value;
+            }
+        }
+    </script>
+</body>
+</html>

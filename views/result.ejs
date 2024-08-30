@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="main-page">
+        <div class="result-img">
+            <% if(isCorrect==1) {%>
+                <img src="/images/correct.jpg">
+            <% } else{ %>
+                <img src="/images/wrong.jpg">
+            <% } %>
+        </div>
+        <a href="/quiz">NEXT</a>
+    </div>
+</body>
+</html>

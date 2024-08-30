@@ -12,16 +12,17 @@ body{
 
 .left{
     position: absolute;
-    top:25vh;
-    left:10vw;
+    top:15vh;
+    left:12vw;
     border: 2px solid black;
     border-radius: 50%;
-    height:50vh;
-    width:50vh;
+    height:70vh;
+    width:70vh;
     display: flex;
     align-items: center; 
     justify-content: center;
     font-size: 1.3rem;
+    overflow: hidden;
 }
 
 .right{
@@ -77,4 +78,49 @@ body{
     border: 2px solid black;
     background-color: white;
     font-size: 1.3rem;
+}
+
+.left img{
+    width: 100%;
+    overflow: hidden;
+}
+
+.quiz-box{
+    position: absolute;
+    top:20vh;
+    right:20vw;
+    height:60vh;
+    width:60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid red;
+}
+
+.ques{
+    height:15vh;
+    width:50vw;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.options form{
+    height:35vh;
+    width:50vw;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-evenly;
+}
+
+.options form button{
+    /* position: absolute; */
+    height:5vh;
+    width:5vw;
+    /* left: 47.5vw; */
 }
