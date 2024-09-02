@@ -243,3 +243,59 @@ body{
     width: 100%;
     /* opacity: 0.7; */
 }
+.photo{
+    position: absolute;
+    top: 5vh;
+    left: 60vw;
+    height: 90vh;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 10px 20px 180px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+
+}
+.photo img{
+    height: 100%;
+    width:auto;
+}
+
+.letter{
+    position: absolute;
+    top: 25vh;
+    left: 5vw;
+    height: 40vh;
+    width:50vw;
+    background-color:  rgb(253, 235, 238);
+    color: rgb(67, 42, 42);
+    overflow: hidden;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 10px 20px 180px rgba(0, 0, 0, 0.5); Subtle shadow */
+}
+
+.btn{
+    position: absolute;
+    top: 70vh;
+    left: 5vw;
+    height: 6vh;
+    width: 13vw;
+    /* border: 2px solid rgb(35, 31, 82); */
+    font-size: 1.2rem;
+    color:  white;
+    background-color: rgb(67, 42, 42);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.btn:hover{
+    background-color: white;
+    color: rgb(67, 42, 42);
+    transition-duration: 0.3s;
+    border: 2px solid rgb(67, 42, 42);;
+}

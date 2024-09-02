@@ -24,6 +24,8 @@ var questions= [
   // {q: "", o1: "", o2:"", o3:"", o4:""}
 ]
 
+var size=questions.length;
+
 const app=express();
 app.use(express.static("public"));
 
@@ -45,7 +47,7 @@ const db= new pg.Client({
     user: "postgres",
     host: "localhost",  
     database: "Aayush",
-    password: "1234qwer",
+    password: "Aditi123*",
     port: 5432 
 });
 db.connect();
@@ -136,7 +138,7 @@ passport.use(
 
 app.get("/quiz",(req,res)=>{
   count++;
-  if(count==8){
+  if(count==size){
     res.redirect("/last");
   }
   else{
