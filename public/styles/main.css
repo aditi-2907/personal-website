@@ -299,3 +299,30 @@ body{
     transition-duration: 0.3s;
     border: 2px solid rgb(67, 42, 42);;
 }
+
+.our-name{
+    position: absolute;
+    top: 10vh;
+    left: 60vw;
+    height: 6vh;
+    width: 13vw;
+    border: 2px solid rgb(35, 31, 82);
+    font-size: 1.2rem;
+    color:  red;
+    z-index: 100;
+}
+.first-page-text{
+    position: absolute;
+    top: -12vh;
+    left: 0vw;
+    height: 20vh;
+    width:42vw;
+    background-color:  rgb(253, 235, 238);
+    color: rgb(67, 42, 42);
+    overflow: hidden;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
