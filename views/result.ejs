@@ -8,6 +8,16 @@
 </head>
 <body>
     <div class="main-page">
+        <div class="im_inside">
+            <img src="/images/i5.jpg">
+        </div>
+        <div class="ans">
+            <% if(isCorrect==1) {%>
+                The Answer Is Correct, Yayyyy 😘😘
+            <% } else{ %>
+                Wrong Answer 🥺🥺
+            <% } %>
+        </div>
         <div class="result-img">
             <% if(isCorrect==1) {%>
                 <img src="/images/correct.jpg">
@@ -15,7 +25,7 @@
                 <img src="/images/wrong.jpg">
             <% } %>
         </div>
-        <a href="/quiz">NEXT</a>
+        <a href="/quiz" class="NxtBtn">NEXT</a>
     </div>
 </body>
 </html>

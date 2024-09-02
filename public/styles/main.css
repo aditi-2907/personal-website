@@ -2,7 +2,7 @@ body{
     overflow: hidden;
 }
 .main-page{
-    position: absolute;
+    position: absolute; 
     top:0vh;
     left:0vw;
     /* border: 2px solid red; */
@@ -13,7 +13,7 @@ body{
 .left{
     position: absolute;
     top:15vh;
-    left:12vw;
+    left:8vw;
     border: 2px solid black;
     border-radius: 50%;
     height:70vh;
@@ -23,6 +23,8 @@ body{
     justify-content: center;
     font-size: 1.3rem;
     overflow: hidden;
+    background-color: white;
+    box-shadow: 10px 20px 180px rgba(0, 0, 0, 0.6); /* Subtle shadow */
 }
 
 .right{
@@ -40,44 +42,78 @@ body{
 
 .right a{
     text-decoration: none;
-    font-size: 1.2rem;
-    height: 5vh;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    height: 6vh;
     width: 20vw;
-    border: 2px solid black;
+    border: 3px solid rgb(67, 42, 42);
     border-radius: 10px;
     display: flex;
     align-items: center; 
     justify-content: center;
-    color: black;
+    color: white;
+    background: rgb(67, 42, 42);
 }
-
+.right a:hover{
+    background-color: white;
+    color: rgb(67, 42, 42);
+    border:3px solid rgb(67, 42, 42);
+    font-weight: bolder;
+    transition-duration: 0.5s;
+}
 .login-form{
     position: absolute;
-    top:25vh;
-    right:30vw;
-    height:50vh;
-    width:40vw;
+    top:20vh;
+    right:37vw;
+    height:48vh;
+    width:26vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    /* border: 2px solid black; */
+    background-color: rgb(253, 235, 238);
+   
+    box-shadow: 10px 20px 180px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+    border-radius: 10px; /* Rounded corners */
 }
 
 .name{
     height: 8vh;
-    width: 20vw;
+    width: 16vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-evenly;
 }
-
-.name button{
-    width: 15vw;
-    height: 5vh;
-    border: 2px solid black;
-    background-color: white;
+.name label{
     font-size: 1.3rem;
+    font-weight: bolder;
+    margin-bottom: 4px;
+    color: rgb(67, 42, 42);
+}
+.name input{
+    height: 5vh;
+    width: 16vw;
+    border-radius: 5px;
+    color: rgb(67, 42, 42);
+}
+.name button{
+    width: 16vw;
+    height: 5vh;
+    /* border: 2px solid black; */
+    background-color: rgb(67, 42, 42);
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+.name button:hover{
+    background-color: white;
+    border: 2px solid rgb(67, 42, 42);
+    color: rgb(67, 42, 42);
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 .left img{
@@ -87,7 +123,7 @@ body{
 
 .quiz-box{
     position: absolute;
-    top:20vh;
+    top:18vh;
     right:20vw;
     height:60vh;
     width:60vw;
@@ -95,13 +131,18 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border: 2px solid red;
+    border: 2px solid rgb(67, 42, 42);;
+    background-color: rgb(253, 235, 238);
+    box-shadow: 10px 20px 180px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+    border-radius: 10px; /* Rounded corners */
 }
 
 .ques{
-    height:15vh;
+    height:13vh;
     width:50vw;
     /* border: 2px solid red; */
+    font-size: 1.8rem;
+    color: rgb(67, 42, 42);;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,6 +153,8 @@ body{
     height:35vh;
     width:50vw;
     /* border: 2px solid red; */
+    font-size: 1.6rem;
+    color: rgb(67, 42, 42);;
     display: flex;
     flex-direction: column;
     /* align-items: center; */
@@ -121,6 +164,82 @@ body{
 .options form button{
     /* position: absolute; */
     height:5vh;
-    width:5vw;
+    width:10vw;
+    background-color: rgb(67, 42, 42);
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 10px;
+
     /* left: 47.5vw; */
+}
+.options form button:hover{
+    background-color: white;
+    color: rgb(67, 42, 42);
+    border: 2px solid rgb(67, 42, 42);
+    cursor: pointer;
+}
+.result-img{
+    position: absolute;
+    top:10vh;
+    left:10vw;
+    border: 2px solid black;
+    border-radius: 50%;
+    height:70vh;
+    width:70vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 10px 20px 180px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+.result-img img{
+    height: 105%;
+}
+.ans{
+    position: absolute;
+    top: 30vh;
+    left: 45vw;
+    height: 10vh;
+    width: 40vw;
+    /* border: 2px solid red; */
+    font-size: 1.8rem;
+    font-weight: bolder;
+    color: rgb(67, 42, 42);
+}
+.NxtBtn{
+    position: absolute;
+    top: 40vh;
+    left: 45vw;
+    height: 6vh;
+    width: 13vw;
+    /* border: 2px solid rgb(35, 31, 82); */
+    font-size: 1.2rem;
+    color:  white;
+    background-color: rgb(67, 42, 42);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    
+}
+.NxtBtn:hover{
+    background-color: white;
+    color: rgb(67, 42, 42);
+    transition-duration: 0.3s;
+    border: 2px solid rgb(67, 42, 42);;
+}
+.im_inside{
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: black; */
+}
+.im_inside img{
+    height: 100%;
+    width: 100%;
+    /* opacity: 0.7; */
 }

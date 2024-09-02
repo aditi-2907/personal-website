@@ -8,19 +8,22 @@
 </head>
 <body>
      <div class="main-page">
+        <div class="im_inside">
+            <img src="/images/i5.jpg">
+        </div>
         <div class="left">
             <% if(locals.name){ %>
                 <img src="/images/img1.jpg">
 
             <% } else{ %>
-                Unlock to see the love.
+                <img src="/images/love.png">
             <% } %>    
         </div>
         <div class="right">
             <% if(locals.name){ %>
 
-                <h3 style="color: lightgreen">successfully logged in</h3>
-                <a href="/quiz">Love quiz</a>
+                <h1 style="color: rgb(67, 42, 42); font-size: rem; font-weight: bolder;">Successfully Logged In</h1>
+                <a href="/quiz">Love Quiz</a>
                 
             <% } else{ %>
                 

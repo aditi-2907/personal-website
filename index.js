@@ -3,7 +3,7 @@ import pg from "pg";
 import passport from "passport";
 import {Strategy} from "passport-local";
 import session from "express-session";
-import bcrypt from "bcrypt";
+import bcrypt, { compareSync } from "bcrypt";
 import bodyParser from "body-parser";
 import 'dotenv/config';
 
@@ -43,10 +43,10 @@ app.use(passport.session());
 
 const db= new pg.Client({
     user: "postgres",
-    host: "localhost",
+    host: "localhost",  
     database: "Aayush",
-    password: "Aditi123*",
-    port: 5432
+    password: "1234qwer",
+    port: 5432 
 });
 db.connect();
 
@@ -115,15 +115,12 @@ passport.use(
         const storedHashedPassword = user.password;
         bcrypt.compare(password, storedHashedPassword, (err, valid) => {
           if (err) {
-            //Error with password check
             console.error("Error comparing passwords:", err);
             return cb(err);
           } else {
             if (valid) {
-              //Passed password check
               return cb(null, user);
             } else {
-              //Did not pass password check
               return cb(null, false);
             }
           }
@@ -139,21 +136,21 @@ passport.use(
 
 app.get("/quiz",(req,res)=>{
   count++;
-  if(count==7){
-    res.redirect("/last",{score:score});
+  if(count==8){
+    res.redirect("/last");
   }
-  res.render("quiz.ejs",{count:count, questions:questions});
+  else{
+    res.render("quiz.ejs",{count:count, questions:questions});
+  }
 })
 
 app.get("/last",(req,res)=>{
-  res.render("last-page.ejs");
+  res.render("last-page.ejs",{score:score});
 })
   
 app.post("/check",async (req,res)=>{
   const selected=req.body.selectedOption;
   const result = await db.query("SELECT * FROM answers WHERE id= $1", [count,]);
-  console.log(selected);
-  console.log(result.rows[0].ans);
   if(result.rows.length>0){
     if(selected == result.rows[0].ans){
       score++;

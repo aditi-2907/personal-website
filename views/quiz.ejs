@@ -8,6 +8,9 @@
 </head>
 <body>
     <div class="main-page">
+        <div class="im_inside">
+            <img src="/images/i5.jpg">
+        </div>
         <div class="quiz-box">
             <div class="ques">
                 <%= questions[count].q  %>
@@ -30,7 +33,7 @@
 
     <script>
         function submitForm() {
-            const selectedOption = document.querySelector('input[name="selectedOption"]:checked');
+            const selectedOption = document.querySelector('input[name="selectedo"]:checked');
             if (selectedOption) {
                 document.getElementById('hiddenSelectedOption').value = selectedOption.value;
             }
